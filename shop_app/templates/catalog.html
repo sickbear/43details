@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block content %}
+<!--
+                    <form method="post" id="search_form">
+                        <div class="form_group search_form_group">
+                            <input type="text"
+                                   class="form_input search_form_input"
+                                   placeholder="Найти деталь по номеру">
+                        </div>
+                        <div>
+                            <input type="submit"
+                                   value="Найти"
+                                   id="search_form_btn">
+                        </div>
+                    </form>
+-->
+                    <div class="catalog_block">
+                        <h1>Выберите марку автомобиля</h1>
+                        <p class="catalog_text">Если марки Вашего автомобиля здесь нет - отправьте запрос нашим менеджерам через форму заявки.</p>
+                        <div class="catalog_items">
+                            {% for mark in marks %}
+                            <div class="catalog_item">
+                                <a href="{% url 'models' mark.id %}">
+                                    <img src="/media/{{ mark.logo }}"
+                                         alt="{{ mark.name }}"
+                                         title="{{ mark.name }}"
+                                         class="catalog_item_img">
+                                </a>
+                            </div>
+                        {% endfor %}
+                        </div>
+                    </div>
+{% endblock %}

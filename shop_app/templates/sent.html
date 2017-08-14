@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block content %}
+                    <div class="sent_block">
+                        <h3>Ваш запрос отправлен</h3>
+                        <div class="offers">
+                            <p>Пока наши менеджеры обрабатывают Ваш запрос, Вы можете ознакомиться с доступными на данный момент 
+                            <a href="{% url 'shares' %}">акциями </a>
+                            нашего интернет-магазина.</p>
+                        </div>
+                    </div>
+{% endblock %}

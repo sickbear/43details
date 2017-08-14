@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block content %}
+                <div class="delivery_block">
+                    <div class="delivery_block_item">
+                        <h2>
+                            <span class="delivery_title">Заказывайте</span> 
+                            <span class="strong_text">не выходя из дома</span>
+                        </h2>
+                        <h3>Доставка:</h3>
+                        <p>Доставка автозапчастей из нашего интернет-магазина – это отличная возможность быстро получить требуемую деталь для вашего автомобиля. Мы осуществляем доставку в любую точку города, которая вам удобна. Наши курьеры доставят вам в целости и сохранности приобретенный товар. Мы готовы доставить не только небольшие покупки, но и крупногабаритные, тяжелые детали – двигатель, коробку и так далее.</p>
+                    </div>
+                    <div class="delivery_block_item">
+                        <h2>
+                            <span class="delivery_title">Оплачивайте</span> 
+                            <span class="strong_text">при получении</span
+                        </h2>
+                        <h3>Способы оплаты:</h3>
+                        <p>Вы можете произвести плату как наличными так и безналичным расчётом при заказе или получении товара. На данный момент доступны следующие виды оплаты:</p>
+                        <div class="delivery_block_item_img">
+                            <img src="{% static 'img/money.png' %}" alt="Способы оплаты">
+                        </div>
+                    </div>
+                </div>
+                <div class="delivery_quality">
+                    <img src="{% static 'img/quality.png' %}" alt="Гарантия качества">
+                </div>
+                
+                  
+{% endblock %}

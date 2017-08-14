@@ -1,0 +1,88 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block content %}
+                    <div class="application_form_block">
+                        <h2>Форма запроса</h2>
+                        <div class="applications_form_items">
+                            <form method="post"
+                                  id="applications_form"
+                                  role="form"
+                                  action="{% url 'sent' %}">
+                                {% csrf_token %}
+                                <div>
+                                    <input type="text"
+                                           class="form_input" 
+                                           name="car_mark"
+                                           value="{{ application.mark.name }}"
+                                           placeholder="Марка автомобиля*" 
+                                           required>
+                                </div>
+                                <div>
+                                    <input type="text"
+                                           class="form_input" 
+                                           name="car_model"
+                                           value="{{ application.model.name }}" 
+                                           placeholder="Модель автомобиля*" 
+                                           required>
+                                </div>
+                                <div>
+                                    <input type="text"
+                                           class="form_input" 
+                                           name="car_series"
+                                           value="{{ application.series.name }}" 
+                                           placeholder="Серия автомобиля*" 
+                                           required>
+                                </div>
+                                <div>
+                                    <input type="text" 
+                                           class="form_input"
+                                           name="car_modification"
+                                           value="{{ application.motor }}" 
+                                           placeholder="Модификация автомобиля*" 
+                                           required>
+                                </div>
+                                <div>
+                                    <input type="text" 
+                                           class="form_input"
+                                           name="car_years_of_issue"
+                                           maxlength="4" 
+                                           placeholder="Год выпуска*" 
+                                           required>
+                                </div>
+                                <div>
+                                    <input type="text"
+                                           class="form_input" 
+                                           name="car_vin" 
+                                           placeholder="VIN автомобиля">
+                                </div>
+                                <div>
+                                    <input type="text"
+                                           name="requested_details"
+                                           class="form_input"
+                                           placeholder="Наименования (номера) запчастей*" 
+                                           required>
+                                </div>
+                                <div>
+                                    <input type="text"
+                                           class="form_input" 
+                                           name="user_name" 
+                                           placeholder="Ваше имя*" 
+                                           required>
+                                </div>
+                                <div>
+                                    <input type="text" 
+                                           class="form_input"
+                                           name="user_phone_or_email" 
+                                           placeholder="Ваш телефон или e-mail*" 
+                                           required>
+                                </div>
+                                <div>
+                                    <input type="submit"
+                                           id="applications_form_btn" 
+                                           value="Отправить">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+{% endblock %}

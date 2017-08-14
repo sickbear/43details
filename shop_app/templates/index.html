@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block content %}
+                    <div class="main_title_block">
+                        <h1 class="main_title1">
+                            Интернет-магазин запчастей для иномарок в Кирове
+                        </h1>
+                        <h2 class="main_title2">"43 Детали"</h2>
+                    </div>
+                    <div class="main_advantages">
+                        <p class="main_advantages_item">
+                            Работа с крупнейшими поставщиками
+                            <i class="fa fa-users" aria-hidden="true"></i>
+                        </p>
+                        <p class="main_advantages_item">
+                            Заказ запчастей без предоплаты
+                            <i class="fa fa-rub" aria-hidden="true"></i>
+                        </p>
+                        <p class="main_advantages_item">
+                            Наличный и безналичный расчёт
+                            <i class="fa fa-credit-card-alt" aria-hidden="true"></i>
+                        </p>
+                        <p class="main_advantages_item">
+                            Бесплатная доставка по Кирову
+                            <i class="fa fa-truck" aria-hidden="true"></i>
+                        </p>
+                        <p class="main_advantages_item">
+                            Доставка запчастей в регионы
+                            <i class="fa fa-truck" aria-hidden="true"></i>
+                        </p>
+                        <p class="main_advantages_item">
+                            Отличное качество, гарантия
+                            <i class="fa fa-thumbs-up" aria-hidden="true"></i>
+                        </p>
+                        <a href="{% url 'catalog' %}">
+                            <p class="main_advantages_item">
+                                Перейдите в каталог
+                                <i class="fa fa-arrow-circle-right" aria-hidden="true"></i>
+                            </p>
+                        </a>
+                        
+                    </div>
+{% endblock %}

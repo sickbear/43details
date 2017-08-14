@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block content %}
+                    <div class="models_block">
+                        <h2>Выберите модель {{ mark_name }}</h2>
+                        <div class="models_items">
+                            {% for model in models %}
+                            <div class="models_item">
+                                <a href="{% url 'series' model.id %}">
+                                    <div>{{ model.name }}</div></a>
+                            </div>
+                            {% endfor %}
+                        </div>
+                        <a href="{% url 'catalog' %}" class="btn_back">
+                               Назад
+                        </a>    
+                    </div>  
+{% endblock %}
+
+
+
+
+
