@@ -3,7 +3,11 @@
 
 {% block content %}
                     <div class="models_block">
-                        <h2>Выберите модель {{ mark_name }}</h2>
+                        <h2>Ищите запчасти для {{ mark_name }}?</h2>
+                        <h3>Выберите модель</h3>
+                        <p  class="catalog_text">
+                            Если модели Вашего автомобиля здесь нет - отправьте запрос нашим менеджерам через форму заявки.
+                        </p>
                         <div class="models_items">
                             {% for model in models %}
                             <div class="models_item">
