@@ -3,7 +3,9 @@
 
 {% block content %}
                     <div class="series_block">
-                        <h2>Выберите модель кузова {{ mark_name }}</h2>
+                        <h2>Выберите модель кузова
+                            <span class="red_text">{{ mark_name }}</span>
+                        </h2>
                         <div class="series_items">
                             {% for batch in series %}
                             <div class="series_item">

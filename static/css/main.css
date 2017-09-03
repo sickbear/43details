@@ -373,6 +373,12 @@ aside {
     text-decoration: none;
 }
 
+.red_text {
+    color: #ff9900;
+    text-shadow: rgb(0,0,0,1) 1px 1px;
+    font-family: 'BebasRegular';
+}
+
 .series_block {
     display: flex;
     flex-direction: column;
@@ -562,10 +568,6 @@ border-top-left-radius: 10px;
 .shares_img img {
     width: 100%;
     max-width: 460px;
-}
-
-.delivery_title {
-    font-family: 'BebasThin';
 }
 
 .delivery_block {
