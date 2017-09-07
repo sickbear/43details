@@ -241,19 +241,26 @@ aside {
 
 .aside_phone_number {
     padding: 15px 0px;
-    background-color: #ff9900;
+    background-color: #1a1f2b;
     border-radius: 6px;
-    color: #fff;
-    text-shadow: 2px 1px 2px #2D2020;
+    border: 1px solid #000;
+    color: #ff9900;
+    text-shadow: rgb(0,0,0,1) 1px 1px;
 }
 
 .aside_phone_number > a {
     color: #fff;
-    text-shadow: rgba(0,0,0,0.4) 2px 1px;
+    text-shadow: rgb(0,0,0,1) 1px 1px;
+    text-decoration: none;
+}
+
+.aside_phone_number > a > span {
+    font-size: 25px;
+    color: #ff9900;
 }
 
 .aside_phone_number > a:hover {
-    text-shadow: rgba(0,0,0,0.6) 2px 1px;
+    font-size: 25px;
 }
 
 .aside_mode {
