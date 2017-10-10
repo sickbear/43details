@@ -21,5 +21,8 @@ $(document).ready(function(){
     window.location = $(this).attr('data-href');
         });
     });
-    
+
+    $(function($){
+       $('.phone').mask('+7 (999) 999-9999');
+    });
 });

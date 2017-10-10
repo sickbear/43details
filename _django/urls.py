@@ -20,7 +20,7 @@ urlpatterns = [
     url(r'^contacts/$', contacts, name='contacts'),
     url(r'^applications_form/(\d+)/$', applications_form, name='applications_form'),
     url(r'^aside_form/', aside_form, name='aside_form'),
-    url(r'^sent/$', sent, name='sent')
+    url(r'^sent/$', sent, name='sent'),
 ]
 
 if settings.DEBUG:

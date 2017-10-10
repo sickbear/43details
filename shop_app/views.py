@@ -132,3 +132,5 @@ def aside_form(request):
 
 def sent(request):
     return render(request, 'sent.html')
+
+
