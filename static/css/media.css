@@ -92,6 +92,71 @@
     }   
 }
 
+@media screen and (max-width: 640px) {
+    header {
+        position: absolute;
+    }
+    .bg_image {
+    background: -moz-linear-gradient(90deg, rgba(220,134,5,1) 0%, rgba(135,82,3,1) 1%, rgba(135,82,3,1) 44%, rgba(35,23,22,1) 100%); /* ff3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(35,23,22,1)), color-stop(56%, rgba(135,82,3,1)), color-stop(99%, rgba(135,82,3,1)), color-stop(100%, rgba(220,134,5,1))); /* safari4+,chrome */
+    background: -webkit-linear-gradient(90deg, rgba(220,134,5,1) 0%, rgba(135,82,3,1) 1%, rgba(135,82,3,1) 44%, rgba(35,23,22,1) 100%); /* safari5.1+,chrome10+ */
+    background: -o-linear-gradient(90deg, rgba(220,134,5,1) 0%, rgba(135,82,3,1) 1%, rgba(135,82,3,1) 44%, rgba(35,23,22,1) 100%); /* opera 11.10+ */
+    background: -ms-linear-gradient(90deg, rgba(220,134,5,1) 0%, rgba(135,82,3,1) 1%, rgba(135,82,3,1) 44%, rgba(35,23,22,1) 100%); /* ie10+ */
+    background: linear-gradient(0deg, rgba(220,134,5,1) 0%, rgba(135,82,3,1) 1%, rgba(135,82,3,1) 44%, rgba(35,23,22,1) 100%); /* w3c */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#231716', endColorstr='#dc8605',GradientType=0 ); /* ie6-9 */ 
+    }
+    footer {
+        height: 30vh;
+    }
+    aside {
+        font-size: 16px;
+    }
+    .form_input {
+        font-size: 14px;
+    }
+    .catalog_item {
+        width: 120px;
+        height: 110px;
+    }
+    .series_item_img {
+        width: 140px;
+    }
+    .modification_thead > th {
+        padding: 6px;
+    }
+    .modification_tbody > td {
+        padding: 0px 11px;
+    }
+    .catalog_text {
+        padding: 5px 15px;
+    }
+    .models_block > h2 {
+        padding: 0 15px;
+    }
+    @-webkit-keyframes blink { 
+        0% { color: #fff; }
+        25% { color: #e5ae5b;}
+        50% { color:  #dc8605;}
+        75% { color: #e5ae5b;}
+        100% { color: #fff; }
+    }
+
+    @keyframes blink {  
+        0% { color: #fff; }
+        25% { color: #e5ae5b; }
+        50% { color:  #dc8605; }
+        75% { color: #e5ae5b; }
+        100% { color: #fff; } 
+    }
+    .aside_phone_number > span {
+/*        color: #fff;*/
+        -webkit-animation: blink 2s linear infinite; 
+        animation: blink 2s linear infinite; 
+        font-weight: bold;
+        color: color: #dc8605;
+    }
+}
+
 @media screen and (max-width: 505px) {
     .modification_thead > th:nth-child(6),
     .modification_tbody > td:nth-child(6) {

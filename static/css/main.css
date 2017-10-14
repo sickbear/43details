@@ -336,6 +336,7 @@ aside {
 }
 
 .catalog_item_img {
+    width: 100%;
     -moz-transition: all 1s ease-out;
      -o-transition: all 1s ease-out;
      -webkit-transition: all 1s ease-out;

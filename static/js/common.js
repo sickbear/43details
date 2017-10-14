@@ -6,7 +6,7 @@ $(document).ready(function(){
         }
 	});
     
-    $('.nav_icon').click(function(){
+    $('.nav_icon').click(function() {
         $('.nav_menu').toggle("slow");
     });
     
@@ -22,7 +22,20 @@ $(document).ready(function(){
         });
     });
 
-    $(function($){
+    $(function($) {
        $('.phone').mask('+7 (999) 999-9999');
     });
+    
+    $(window).resize(function() {
+        if ($(window).width() < 641) {
+            $('.aside_fast_call').html('Звонок в 2 касания!<br>');
+        }
+    });
+    
+    $(window).resize(function() {
+        if ($(window).width() > 641) {
+            $('.aside_fast_call').html('');
+        }
+    });
+    
 });
