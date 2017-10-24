@@ -71,6 +71,10 @@ header {
     border-bottom: #1a1f2b solid 2px;
     box-sizing: padding-box;
 }
+.nav_link:nth-child(3) > a:after {
+    content: ' new!';
+    color: red;
+}
 
 .nav_link > a:hover {
     color: #ff9900;
