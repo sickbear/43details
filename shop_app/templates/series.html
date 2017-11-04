@@ -8,19 +8,20 @@
                         </h2>
                         <div class="series_items">
                             {% for batch in series %}
-                            <div class="series_item">
-                                <a href="{% url 'modifications' batch.id %}">
-                                <img src="/media/{{ batch.image }}"
-                                     alt="{{ batch.name }}"
-                                     title="{{ batch.name }}"
-                                     class="series_item_img">
+                            <div>
+                                <a href="{% url 'modifications' batch.id %}"
+                                   class="series_item">
+                                    <img src="/media/{{ batch.image }}"
+                                         alt="{{ batch.name }}"
+                                         title="{{ batch.name }}"
+                                         class="series_item_img">
+                                    <span>{{ batch.name }}</span>
                                 </a>
-                                <a href="#" class="series_link">{{ batch.name }}</a>
                             </div>
                             {% endfor %}
                         </div>
                         <a href="{% url 'models' car_model %}" class="btn_back">
-                               Назад
+                            Назад
                         </a>
                     </div>
 {% endblock %}

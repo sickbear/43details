@@ -3,6 +3,8 @@ from django.http import HttpResponseRedirect
 from django.conf import settings
 from .models import Marks, Models, Series, Modification
 from django.core.mail import send_mail
+from django.http import Http404
+
 
 
 def main(request):
@@ -18,26 +20,29 @@ def catalog(request):
 
 
 def models(request, mark_id):
+    page = 'catalog'
     models = Models.objects.filter(mark__id=mark_id)
     mark_name = models[0].mark.name
-    context = {'models': models, 'mark_name': mark_name}
+    context = {'page': page, 'models': models, 'mark_name': mark_name}
     return render(request, 'models.html', context)
 
 
 def series(request, model_id):
+    page = 'catalog'
     series = Series.objects.filter(model__id=model_id)
     car_model = series[0].mark.id
     mark_name = series[0].mark.name
-    context = {'series': series, 'car_model': car_model, 'mark_name': mark_name}
+    context = {'page': page, 'series': series, 'car_model': car_model, 'mark_name': mark_name}
     return render(request, 'series.html', context)
 
 
 def modifications(request, series_id):
+    page = 'catalog'
     modification = Modification.objects.filter(series__id=series_id)
     car_series = modification[0].model.id
     mark_name = modification[0].mark.name
     model_name = modification[0].model.name
-    context = {'modification': modification, 'car_series': car_series,
+    context = {'page': page, 'modification': modification, 'car_series': car_series,
                'mark_name': mark_name, 'model_name': model_name}
     return render(request, 'modification.html', context)
 
@@ -63,6 +68,7 @@ def contacts(request):
 
 
 def applications_form(request, car_id):
+    page = 'catalog'
     if request.method == 'POST':
         car_mark = request.POST.get('car_mark')
         car_model = request.POST.get('car_model')
@@ -80,7 +86,7 @@ def applications_form(request, car_id):
         to_email = [from_email, settings.MAIN_EMAIL]
         contact_message = '''
         Запрос от......... {}
-        Тел.(email)....... {}
+        Тел............... {}
         Марка............. {}
         Модель............ {}
         Серия............. {}
@@ -101,7 +107,7 @@ def applications_form(request, car_id):
         return HttpResponseRedirect('/sent/')
     else:
         application = Modification.objects.get(id=car_id)
-        return render(request, 'applications_form.html', {'application': application})
+        return render(request, 'applications_form.html', {'page': page, 'application': application})
 
 
 def aside_form(request):
@@ -116,7 +122,7 @@ def aside_form(request):
         to_email = [from_email, settings.MAIN_EMAIL]
         contact_message = '''
                 Запрос от......... {}
-                Тел.(email)....... {}
+                Тел............... {}
                 Автомобиль........ {}
                 Детали............ {}
                 '''.format(name, contact, car, parts)
@@ -131,6 +137,6 @@ def aside_form(request):
         return render(request, 'index.html')
 
 def sent(request):
-    return render(request, 'sent.html')
-
+    page = 'catalog'
+    return render(request, 'sent.html', {'page': page})
 

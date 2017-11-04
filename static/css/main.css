@@ -189,6 +189,7 @@ aside {
     background-color: #1a1f2b;
     border-radius: 6px;
     margin-bottom: 30px;
+    box-shadow: 2px 3px 3px rgba(0,0,0,0.7);
 }
 
 .aside_title {
@@ -255,6 +256,7 @@ aside {
     border: 1px solid #000;
     color: #ff9900;
     text-shadow: rgb(0,0,0,1) 1px 1px;
+    box-shadow: 2px 3px 3px rgba(0,0,0,0.7);
 }
 
 .aside_phone_number > a {
@@ -378,6 +380,8 @@ aside {
     text-align: center;
     font-family: 'RobotoCondensedRegular';
     border: 1px solid #888;
+    text-decoration: none;
+    color: #000;
 }
 
 .models_item:hover {
@@ -410,6 +414,11 @@ aside {
     justify-content: center;
 }
 
+.series_items > div {
+    text-align: center;
+    padding: 15px 0;
+}
+
 .series_item {
     display: flex;
     flex-direction: column;
@@ -420,6 +429,10 @@ aside {
     border: 1px solid #888;
     background-color: #fff;
     cursor: pointer;
+    height: 100%;
+    color: #000;
+    text-decoration: none;
+    font-family: 'RobotoCondensedRegular';
 }
 
 .series_item:hover {

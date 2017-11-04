@@ -12,10 +12,9 @@
                         </p>
                         <div class="models_items">
                             {% for model in models %}
-                            <div class="models_item">
-                                <a href="{% url 'series' model.id %}">
-                                    <div>{{ model.name }}</div></a>
-                            </div>
+                            <a href="{% url 'series' model.id %}" class="models_item">
+                                <span>{{ model.name }}</span>
+                            </a>
                             {% endfor %}
                         </div>
                         <a href="{% url 'catalog' %}" class="btn_back">
