@@ -1,9 +1,14 @@
 $(document).ready(function(){
+
+    var width_screen = $(window).width()
+    if (width_screen <= 768) {
+        $('.aside_fast_call').html('Звонок в 2 касания!<br>');
+    }
       
     $(window).resize(function() {		
 		if ($(window).width() < 770) {			
 			$('.nav_menu').css('display','none');
-        }
+        };
 	});
     
     $('.nav_icon').click(function() {
@@ -27,9 +32,11 @@ $(document).ready(function(){
     });
     
     $(window).resize(function() {
-        if ($(window).width() < 641) {
+        if ($(window).width() < 768) {
             $('.aside_fast_call').html('Звонок в 2 касания!<br>');
-        }
+        } else {
+            $('.aside_fast_call').html();
+        };
     });
     
     $(window).resize(function() {

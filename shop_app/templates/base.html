@@ -20,10 +20,15 @@
         </title>
     </head>
     <body>
-        <div class="wrapper">
+        <div class="wrapper" itemscope itemtype="http://schema.org/LocalBusiness">
+            <meta itemprop="priceRange" content="$">
+            <meta itemprop="address" content="Киров">
+            <meta itemprop="name" content="Запчасти для иномарок">
+            <meta itemprop="telephone" content="8 (8332) 266-560">
             <header>
                 <div class="header_logo">
-                    <img src="{% static 'img/logo.png' %}" alt="Логотип">
+                    <img src="{% static 'img/logo.png' %}" 
+                         alt="Логотип">
                 </div>
                 <nav class="nav">
                     <a href="#" class="nav_icon">Меню</a>
@@ -95,7 +100,7 @@
                                    required>
                         </div>       
                         <div class="form_group">       
-                            <input type="aside_text"
+                            <input type="text"
                                    class="form_input aside_form_input"
                                    placeholder="Наименования (номера) деталей"
                                    name="parts"
@@ -107,7 +112,9 @@
                                    id="aside_form_btn">
                         </div>       
                     </form>
-                    <p class="aside_mode">
+                    <p class="aside_mode" 
+                       itemprop="openingHours" 
+                       datetime="Mo-Su 10:00-20:00">
                         РЕЖИМ РАБОТЫ:<br>Пн-Пт | 10:00 - 20:00<br>
                         Сб-Вс | 10:00-18:00
                     </p>
@@ -120,7 +127,7 @@
                 <div class="footer_item"></div>
                 <div class="footer_item">
                     <p class="footer_item_data">
-                        Интернет-магазин "43 Детали"<br>
+                        Интернет-магазин <span itemprop="brand">"43 Детали"</span><br>
                         ОГРНИП: 315435000010813     <br>
                         <a href="{% static 'pdf/privacy.pdf' %}" 
                            target="_blank"
