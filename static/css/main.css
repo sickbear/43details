@@ -394,6 +394,41 @@ aside {
     text-decoration: none;
 }
 
+.models_advantages {
+    display: flex;
+    margin: 10px 0 50px;
+}
+
+.models_advantages_item {
+    width: 200px;
+    height: 200px;
+}
+
+.models_advantages li {
+    font-family: 'RobotoCondensedRegular';
+    list-style: none;
+}
+
+.models_advantages li:before {
+    content: url('../img/arrow.png');
+}
+
+.models_advantages li:hover {
+    text-shadow: 3px 4px 5px #605C43;
+    cursor: default;
+}
+
+.models_advantages_item img {
+    width: 100%;
+}
+
+.models_advantages_item img:nth-child(2) {
+    position: relative;
+    bottom: 170px;
+    bottom: 110px;
+    width: 150px;
+}
+
 .red_text {
     color: #ff9900;
     text-shadow: rgb(0,0,0,1) 1px 1px;

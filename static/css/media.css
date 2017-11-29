@@ -207,6 +207,12 @@
     #search_form_btn {
         margin: 12px 30px;
     }
+    
+    .models_advantages {
+        margin: 0;
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 @media screen and (max-width: 320px) {
