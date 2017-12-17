@@ -88,6 +88,10 @@ header {
     border-bottom: #ff9900 solid 1px;
 }
 
+.no_bg {
+    background: none;
+}
+
 .nav_icon {
     display: none;
 }
