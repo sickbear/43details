@@ -17,6 +17,10 @@ h1, h2, h3 {
     
 }
 
+a {
+    outline: none;
+}
+
 /* HEADER */
 
 header {
