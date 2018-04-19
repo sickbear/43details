@@ -40,7 +40,7 @@
     main {
         background-image: url(../img/auto.png);
         background-repeat: no-repeat;
-        background-position: center 24%;
+        background-position: center 33%;
         background-size: 600px 300px;
     }
     
@@ -56,15 +56,9 @@
         border-radius: 6px;
     }
     
-    .bg_image {
-        background: -moz-linear-gradient(90deg, rgba(220,134,5,1) 0%, rgba(135,82,3,1) 1%, rgba(135,82,3,1) 44%, rgba(35,23,22,1) 100%); /* ff3.6+ */
-        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(35,23,22,1)), color-stop(56%, rgba(135,82,3,1)), color-stop(99%, rgba(135,82,3,1)), color-stop(100%, rgba(220,134,5,1))); /* safari4+,chrome */
-        background: -webkit-linear-gradient(90deg, rgba(220,134,5,1) 0%, rgba(135,82,3,1) 1%, rgba(135,82,3,1) 44%, rgba(35,23,22,1) 100%); /* safari5.1+,chrome10+ */
-        background: -o-linear-gradient(90deg, rgba(220,134,5,1) 0%, rgba(135,82,3,1) 1%, rgba(135,82,3,1) 44%, rgba(35,23,22,1) 100%); /* opera 11.10+ */
-        background: -ms-linear-gradient(90deg, rgba(220,134,5,1) 0%, rgba(135,82,3,1) 1%, rgba(135,82,3,1) 44%, rgba(35,23,22,1) 100%); /* ie10+ */
-        background: linear-gradient(0deg, rgba(220,134,5,1) 0%, rgba(135,82,3,1) 1%, rgba(135,82,3,1) 44%, rgba(35,23,22,1) 100%); /* w3c */
-        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#231716', endColorstr='#dc8605',GradientType=0 ); /* ie6-9 */ 
-    }
+   .bg_image {
+        background-position: 7%;
+   }
         
     aside {
         margin-top: 0;
@@ -114,6 +108,7 @@
     .main_advantages_item {
         font-size: 17px;
         width: 300px;
+        margin: 1px 0;
     }
     
     .shares_block {
@@ -227,7 +222,7 @@
 
 @media screen and (max-width: 450px) {
     main {
-        background-position: center 32%;
+        background-position: center 45%;
     }
 }
 
@@ -238,7 +233,7 @@
     }
     
     main {
-        background-position: center 36%;
+        background-position: center 45%;
     }
 }
 
