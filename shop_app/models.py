@@ -10,7 +10,7 @@ class Marks(models.Model):
 
 
 class Models(models.Model):
-    mark = models.ForeignKey(Marks, verbose_name='Марка')
+    mark = models.ForeignKey(Marks, verbose_name='Марка', on_delete=models.CASCADE)
     name = models.CharField(verbose_name='Модель', max_length=32)
 
     def __str__(self):
@@ -18,8 +18,8 @@ class Models(models.Model):
 
 
 class Series(models.Model):
-    mark = models.ForeignKey(Marks, verbose_name='Марка')
-    model = models.ForeignKey(Models, verbose_name='Модель')
+    mark = models.ForeignKey(Marks, verbose_name='Марка', on_delete=models.CASCADE)
+    model = models.ForeignKey(Models, verbose_name='Модель', on_delete=models.CASCADE)
     name = models.CharField(verbose_name='Серия', max_length=32)
     image = models.ImageField(verbose_name='Фото', upload_to='series')
 
@@ -28,9 +28,9 @@ class Series(models.Model):
 
 
 class Modification(models.Model):
-    mark = models.ForeignKey(Marks, verbose_name='Марка')
-    model = models.ForeignKey(Models, verbose_name='Модель')
-    series = models.ForeignKey(Series, verbose_name='Серия')
+    mark = models.ForeignKey(Marks, verbose_name='Марка', on_delete=models.CASCADE)
+    model = models.ForeignKey(Models, verbose_name='Модель', on_delete=models.CASCADE)
+    series = models.ForeignKey(Series, verbose_name='Серия', on_delete=models.CASCADE)
     motor = models.CharField(verbose_name='Двигатель', max_length=32)
     body = models.CharField(verbose_name='Кузов', max_length=32)
     doors = models.PositiveIntegerField(verbose_name='Дверей')
